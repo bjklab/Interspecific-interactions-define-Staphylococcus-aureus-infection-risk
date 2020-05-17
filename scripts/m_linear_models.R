@@ -604,7 +604,7 @@ sa_linear_cohorts %>%
 p_sa_linear_cohorts
 
 # ggsave(plot = p_sa_linear_cohorts, filename = "./figs/supp/p_sa_linear_cohorts.png", height = 4, width = 8, units = "in", dpi = 600)
-# ggsave(plot = p_sa_linear_cohorts, filename = "./figs/supp/p_sa_linear_cohorts.svg", height = 4, width = 8, units = "in")
+# ggsave(plot = p_sa_linear_cohorts, filename = "./figs/supp/p_sa_linear_cohorts.svg", height = 4, width = 8, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_sa_linear_cohorts, filename = "./figs/supp/p_sa_linear_cohorts.pdf", height = 4, width = 8, units = "in")
 
 

@@ -393,7 +393,7 @@ ggdraw(plot_grid(p_lrti_binomial_Sa_CLR_off_on + theme(legend.position = "none")
 p_lrti_model_CLR_off_on_combined
 
 # ggsave(plot = p_lrti_model_CLR_off_on_combined, filename = "./figs/supp/p_lrti_model_CLR_off_on_combined.png", height = 9, width = 9, units = "in", dpi = 600)
-# ggsave(plot = p_lrti_model_CLR_off_on_combined, filename = "./figs/supp/p_lrti_model_CLR_off_on_combined.svg", height = 9, width = 9, units = "in")
+# ggsave(plot = p_lrti_model_CLR_off_on_combined, filename = "./figs/supp/p_lrti_model_CLR_off_on_combined.svg", height = 9, width = 9, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_lrti_model_CLR_off_on_combined, filename = "./figs/supp/p_lrti_model_CLR_off_on_combined.pdf", height = 9, width = 9, units = "in")
 
 

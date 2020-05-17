@@ -345,6 +345,6 @@ list("Weighted Jaccard" = pcoa_melt(weighted_jaccard_dist),
 p_all_dist
 
 # ggsave(plot = p_all_dist, filename = "./figs/supp/p_validation_AN_pcoa_R2.pdf", height = 7, width = 6, units = "in")
-# ggsave(plot = p_all_dist, filename = "./figs/supp/p_validation_AN_pcoa_R2.svg", height = 7, width = 6, units = "in")
+# ggsave(plot = p_all_dist, filename = "./figs/supp/p_validation_AN_pcoa_R2.svg", height = 7, width = 6, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_all_dist, filename = "./figs/supp/p_validation_AN_pcoa_R2.png", height = 7, width = 6, units = "in", dpi = 600)
 

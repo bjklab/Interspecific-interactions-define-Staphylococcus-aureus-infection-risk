@@ -297,7 +297,7 @@ ggdraw(plot_grid(plot_grid(p_et_v_an_Sa_prop_histogram, p_et_v_an_Sa_prop_model_
 p_et_v_an_combined
        
 # ggsave(plot = p_et_v_an_combined, filename = "./figs/main/p_et_v_an_combined.png", height = 8, width = 8, units = "in", dpi = 600)
-# ggsave(plot = p_et_v_an_combined, filename = "./figs/main/p_et_v_an_combined.svg", height = 8, width = 8, units = "in")
+# ggsave(plot = p_et_v_an_combined, filename = "./figs/main/p_et_v_an_combined.svg", height = 8, width = 8, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_et_v_an_combined, filename = "./figs/main/p_et_v_an_combined.pdf", height = 8, width = 8, units = "in")
 
 

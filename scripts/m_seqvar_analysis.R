@@ -125,7 +125,7 @@ ggdraw(plot_grid(p_staph_effects, p_coryn_effects, nrow = 2, rel_heights = c(11,
 p_tree_combined
 
 # ggsave(plot = p_tree_combined, filename = "./figs/supp/p_tree_combined.png", height = 22, width = 10, units = "in", dpi = 600)
-# ggsave(plot = p_tree_combined, filename = "./figs/supp/p_tree_combined.svg", height = 22, width = 10, units = "in")
+# ggsave(plot = p_tree_combined, filename = "./figs/supp/p_tree_combined.svg", height = 22, width = 10, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_tree_combined, filename = "./figs/supp/p_tree_combined.pdf", height = 22, width = 10, units = "in")
 
 

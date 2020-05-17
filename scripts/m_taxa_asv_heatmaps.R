@@ -267,7 +267,7 @@ ggdraw(plot_grid(p_family_AN_heat, p_family_ET_heat, p_staph_heat, p_coryne_heat
 p_heatmap_combined
 
 # ggsave(plot = p_heatmap_combined, filename = "./figs/supp/p_heatmap_combined.png", height = 16, width = 24, units = "in", dpi = 600)
-# ggsave(plot = p_heatmap_combined, filename = "./figs/supp/p_heatmap_combined.svg", height = 16, width = 24, units = "in")
+# ggsave(plot = p_heatmap_combined, filename = "./figs/supp/p_heatmap_combined.svg", height = 16, width = 24, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_heatmap_combined, filename = "./figs/supp/p_heatmap_combined.pdf", height = 16, width = 24, units = "in")
 
 

@@ -248,7 +248,7 @@ ggdraw(plot_grid(p_lrti_binomial_Sa_cohorts + theme(legend.position = "none"), p
 p_lrti_model_combined
 
 # ggsave(plot = p_lrti_model_combined, filename = "./figs/main/p_lrti_model_combined.png", height = 9, width = 8, units = "in", dpi = 600)
-# ggsave(plot = p_lrti_model_combined, filename = "./figs/main/p_lrti_model_combined.svg", height = 9, width = 8, units = "in")
+# ggsave(plot = p_lrti_model_combined, filename = "./figs/main/p_lrti_model_combined.svg", height = 9, width = 8, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_lrti_model_combined, filename = "./figs/main/p_lrti_model_combined.pdf", height = 9, width = 8, units = "in")
 
 

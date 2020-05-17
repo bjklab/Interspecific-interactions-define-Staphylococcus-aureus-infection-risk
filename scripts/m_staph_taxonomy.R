@@ -88,6 +88,6 @@ asv_micu_complete %>%
 p_Sa_taxonomy <- p_count + p_prop + plot_layout(ncol = 1)
 
 # ggsave(plot = p_Sa_taxonomy, filename = "./figs/supp/p_Sa_taxonomy.pdf", height = 6, width = 6, units = "in")
-# ggsave(plot = p_Sa_taxonomy, filename = "./figs/supp/p_Sa_taxonomy.svg", height = 6, width = 6, units = "in")
+# ggsave(plot = p_Sa_taxonomy, filename = "./figs/supp/p_Sa_taxonomy.svg", height = 6, width = 6, units = "in", system_fonts = list(sans = "Roboto"))
 # ggsave(plot = p_Sa_taxonomy, filename = "./figs/supp/p_Sa_taxonomy.png", height = 6, width = 6, units = "in", dpi = 600)
 
