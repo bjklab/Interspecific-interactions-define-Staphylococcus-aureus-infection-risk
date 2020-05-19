@@ -1,5 +1,5 @@
 ---
-#title: "Interspecific interactions define _Staphylococcus aureus_ infection risk during mechanical ventilation"  
+#title: "Interspecific interactions define respiratory _Staphylococcus aureus_ infection risk during mechanical ventilation"  
 #author: "Brendan J. Kelly, MD, MS"
 bibliography: bib/exported-references.bib
 csl: csl/the-isme-journal.csl
@@ -74,7 +74,7 @@ source("./scripts/m_staph_taxonomy.R")
   
 
 ## Title  
-Interspecific interactions define _Staphylococcus aureus_ infection risk during mechanical ventilation  
+Interspecific interactions define respiratory _Staphylococcus aureus_ infection risk during mechanical ventilation  
   
 ## Running Title  
 Respiratory _Staph aureus_ interactions  
