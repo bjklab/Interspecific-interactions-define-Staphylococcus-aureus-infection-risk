@@ -76,8 +76,8 @@ source("./scripts/m_staph_taxonomy.R")
 ## Title  
 Interspecific interactions define _Staphylococcus aureus_ infection risk during mechanical ventilation  
   
-## Abbreviated Title  
-Respiratory _Corynebacterium_ and _Staph aureus_  
+## Running Title  
+Respiratory _Staph aureus_ interactions  
   
 ## Authors  
 Brendan J. Kelly, MD, MS (1,2); Ebbing Lautenbach, MD, MPH, MSCE (1,2); Jason Roy, PhD (5); Ayannah S. Fitzgerald, BSN (3,4); Layla A. Khatib, BS (3,4); Ize Imai, MS (4); Leigh Cressman, MA (2); Frederic D. Bushman, PhD (3); Ronald G. Collman, MD (3,4)  
@@ -107,7 +107,7 @@ RGC - study design, manuscript revisions
 The authors report no relevant disclosures.  
   
 ## Data Availability  
-Processed clinical and microbiome data, as well as analysis scripts and model code are available at github.com/bjkellyio. Raw 16S rRNA gene  sequence data have been made publicly available at the National Center for Biotechnology Information's Sequence Read Archive (NCBI SRA) with BioProject ID: PRJNA529220.  
+Processed clinical and microbiome data, as well as analysis scripts and model code are available at github.com/bjklab. Raw 16S rRNA gene  sequence data have been made publicly available at the National Center for Biotechnology Information's Sequence Read Archive (NCBI SRA) with BioProject ID: PRJNA529220.  
   
 ## Keywords  
 Staphylococcus aureus, Ventilator-Associated Pneumonia, Microbiome, Corynebacterium    
@@ -120,10 +120,8 @@ Staphylococcus aureus, Ventilator-Associated Pneumonia, Microbiome, Corynebacter
   
 ### Abstract  
   
-* __Question Addressed__: Intranasal colonization with _Staphylococcus aureus_ ( _Sa_ ) is a marker for increased risk of invasive _Sa_ infection. Prior studies in healthy subjects suggest other nasal bacteria may interact with _Sa_ and impact risk of colonization, but their impact on invasive disease is unknown. We sought to define the relationship between intranasal and respiratory tract microbiota among critically ill subjects dependent on mechanical ventilation and identify features that impact risk of _Sa_ lower respiratory tract infection (LRTI).  
-* __Patients and Methods__: We enrolled two prospective cohorts (pilot n = `r micu_cohort %>% filter(grepl("pilot",subject_id)) %>% pull(subject_id) %>% unique() %>% length()`; validation n = `r micu_cohort %>% filter(grepl("validation",subject_id)) %>% pull(subject_id) %>% unique() %>% length()`) of subjects dependent on mechanical ventilation in the medical intensive care unit of an academic medical center. We collected longitudinal  anterior nares (AN) and endotracheal aspirate (ET) specimens to analyze bacterial community composition by 16S ribosomal RNA gene sequencing.  
-* __Results__: Three intranasal  _Sa_ amplicon sequence variants (ASVs), which were identified across subjects, cohorts, and sequencing runs, were associated with increased _Sa_ abundance in both AN and ET sites, as well as increased risk for _Sa_ LRTI. Of 597 non- _Sa_ intranasal ASVs, 11 were identified as protective against _Sa_ LRTI, even accounting for the presence of _Sa_ ASVs and prior antibiotic exposure. 8 of 11 (72.7%) protective ASVs were  _Corynebacterium_ species.   
-* __Conclusions__: During critical illness and mechanical ventilation, intranasal microbiome features define the risk of _Sa_ ventilator-associated LRTI. Intranasal _Sa_ ASVs associated with high lower respiratory abundance increase risk, but interspecific interactions largely driven by _Corynebacterium_ decrease the risk of invasive disease posed by _Sa_ nasal colonization.    
+Intranasal colonization with _Staphylococcus aureus_ ( _Sa_ ) is a marker for increased risk of invasive _Sa_ infection. Nasal bacteria have been shown to interact with _Sa_ and impact risk of colonization, but their impact on invasive disease is unknown. We sought to define the relationship between intranasal and respiratory tract microbiota among critically ill subjects dependent on mechanical ventilation and identify features that impact risk of _Sa_ lower respiratory tract infection (LRTI). We enrolled two prospective cohorts (pilot n = `r micu_cohort %>% filter(grepl("pilot",subject_id)) %>% pull(subject_id) %>% unique() %>% length()`; validation n = `r micu_cohort %>% filter(grepl("validation",subject_id)) %>% pull(subject_id) %>% unique() %>% length()`), collected longitudinal anterior nares (AN) and endotracheal aspirate (ET) specimens, and analyzed bacterial community composition by 16S ribosomal RNA gene sequencing. Three intranasal _Sa_ amplicon sequence variants (ASVs) were associated with increased _Sa_ abundance in both AN and ET sites, as well as increased risk for _Sa_ LRTI. Of 597 non- _Sa_ intranasal ASVs, 11 were identified as protective against _Sa_ LRTI, adjusting for abundance of _Sa_ ASVs and prior antibiotic exposure. 8 of 11 (72.7%) protective ASVs were Corynebacterium species. During mechanical ventilation, the risk of _Sa_ ventilator-associated LRTI increases with abundance of key _Sa_ ASVs, but interspecific interactions largely driven by _Corynebacterium_ species decrease the risk of invasive disease posed by _Sa_ nasal colonization.  
+  
   
   
 -----  
@@ -164,7 +162,7 @@ We sequentially enrolled pilot then validation cohorts of critically ill adults 
   
 * __Secondary Analyses__: Linear models were fit to evaluate the relationship between AN and ET _Sa_ ASVs, restricted to paired, same-day AN and ET specimens. All `r micu_cohort %>% filter(grepl("pilot",subject_id)) %>% pull(subject_id) %>% unique() %>% length()` pilot cohort subjects provided both AN and ET specimens. All validation cohort subjects provided AN specimens, but ET specimens were available for only `r asv_micu_complete %>% filter((subject_id %in% micu_cohort$subject_id) & grepl("validation",subject_id) == TRUE & specimen_type == "ET") %>% pull(subject_id) %>% unique() %>% length()` of them for logistical reasons. (No significant difference was observed in the AN microbiome between validation subjects with or without ET specimens; PERMANOVA/adonis analysis [@anderson_2001] of AN community variance attributable to whether ET specimens could be collected: unweighted Jaccard R^2^ 0.013, unweighted UniFrac R^2^ 0.008, weighted Jaccard R^2^ 0.012, weighted UniFrac R^2^ 0.039).  
   
-* __Availability of Data__: Sequence data is publicly available on the National Center for Biotechnology Information’s Sequence Read Archive (NCBI SRA) with BioProject ID: PRJNA529220. Model code, as well as code used to produce the manuscript and figures, is available at github.com/bjkellyio.  
+* __Availability of Data__: Sequence data is publicly available on the National Center for Biotechnology Information’s Sequence Read Archive (NCBI SRA) with BioProject ID: PRJNA529220. Model code, as well as code used to produce the manuscript and figures, is available at github.com/bjklab.  
   
   
 -----  
@@ -217,35 +215,32 @@ In summary, our findings advance the understanding of how intranasal _Sa_ coloni
 BJK is supported by the National Institute for Allergy and Infectious Diseases (K23 AI121485 and L30 AI120149), as well as Centers for Disease Control and Prevention (CDC) contract awards (BAA 200-2016-91964 and 200-2018-02919). BJK and EL are supported by the CDC Healthcare-Associated Infection Prevention Epicenters Program (U54CK000485). RGC and FDB are supported by R33HL137063. We acknowledge financial and other support from the Penn-CHOP Microbiome Program and the Penn Center for AIDS Research (P30AI045008).  
   
   
+  
 -----
 \newpage
 <P style = "page-break-before: always">
   
+### Conflicts of Interest:  
+We report no conflicts of interest.  
   
-### Tables:  
   
-#### Table 1:  
   
-```{r table1_pilot, eval=TRUE, autodep=TRUE, fig.align='center'}
+-----
+\newpage
+<P style = "page-break-before: always">
+  
+### References:  
+  
+<div id="refs"></div>
+  
+  
 
-#t1_Sa_pilot
-
-```
-  
-```{r table1_validation, eval=TRUE, autodep=TRUE, fig.align='center'}
-
-#t1_Sa_validation
-
-```
-  
-__Table 1: Subject characteristics.__ Subject demographics, laboratory values at day of enrollment, medical comorbidities, and recent antibiotic exposures are presented for the pilot and validation cohorts. For categorical variables, counts and proportions are given; for continuous variables, medians and interquartile ranges are given. Subjects in both cohorts are compared by whether _Sa_ was detected by AN 16S rRNA gene sequencing at enrollment. Categorical values are compared with Fisher’s exact test; continuous variables are compared with Wilcoxon rank-sum tests. (WBC: white blood cell count; AST: aspartate aminotransferase; ALT: alanine aminotransferase; COPD: chronic obstructive pulmonary disease; ILD: interstitial lung disease).  
-  
   
 -----  
 \newpage
 <P style = "page-break-before: always">
   
-### Figures:  
+### Figure Legends:  
   
 #### Figure 1:  
   
@@ -367,18 +362,32 @@ __Supplemental Figure 4: Phylogenetic relationships between _Staphylococcus_ and
   
   
   
+
 -----
 \newpage
 <P style = "page-break-before: always">
   
   
-## References  
+### Tables:  
   
-<div id="refs"></div>
+#### Table 1:  
+  
+```{r table1_pilot, eval=TRUE, autodep=TRUE, fig.align='center'}
+
+#t1_Sa_pilot
+
+```
+  
+```{r table1_validation, eval=TRUE, autodep=TRUE, fig.align='center'}
+
+#t1_Sa_validation
+
+```
+  
+__Table 1: Subject characteristics.__ Subject demographics, laboratory values at day of enrollment, medical comorbidities, and recent antibiotic exposures are presented for the pilot and validation cohorts. For categorical variables, counts and proportions are given; for continuous variables, medians and interquartile ranges are given. Subjects in both cohorts are compared by whether _Sa_ was detected by AN 16S rRNA gene sequencing at enrollment. Categorical values are compared with Fisher’s exact test; continuous variables are compared with Wilcoxon rank-sum tests. (WBC: white blood cell count; AST: aspartate aminotransferase; ALT: alanine aminotransferase; COPD: chronic obstructive pulmonary disease; ILD: interstitial lung disease).  
   
   
 
-  
 -----
 \newpage
 <P style = "page-break-before: always">
